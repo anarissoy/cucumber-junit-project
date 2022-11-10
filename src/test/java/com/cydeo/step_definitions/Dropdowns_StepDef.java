@@ -24,21 +24,21 @@ public class Dropdowns_StepDef {
     @Then("User should see below info in month dropdown")
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
 
-//        Select select = new Select(dropdownsPage.monthDropdown);
-//
-//        List<WebElement> actualOptionsAsWebElement = select.getOptions();
-//
-//        List<String> actualOptionsAsString = new ArrayList<>();
-//
-//        for (WebElement each : actualOptionsAsWebElement) {
-//            actualOptionsAsString.add(each.getText());
-//        }
+        Select select = new Select(dropdownsPage.monthDropdown);
+
+        List<WebElement> actualOptionsAsWebElement = select.getOptions();
+
+        List<String> actualOptionsAsString = new ArrayList<>();
+
+        for (WebElement each : actualOptionsAsWebElement) {
+            actualOptionsAsString.add(each.getText());
+        }
 
         // This utility method will return us List of String of given dropdown webElement
-       List<String> actualOptionsAsString = BrowserUtils.dropdownOptionsAsString(dropdownsPage.monthDropdown);
+       // 2 List<String> actualOptionsAsString = BrowserUtils.dropdownOptionsAsString(dropdownsPage.monthDropdown);
 
         //Assert will check the size of the list first. If it is matching it will check/verify content 1 by 1
-        Assert.assertEquals(expectedMonths,actualOptionsAsString);
+        // 2 Assert.assertEquals(expectedMonths,actualOptionsAsString);
 
     }
 
